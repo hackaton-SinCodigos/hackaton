@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
 import { environments } from './config/environments.js';
+import { startDb } from './config/relations.js';
 
 const app = express();
 
@@ -25,4 +26,5 @@ app.get('/', (req, res) => {
 const PORT = environments.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+  startDb()
 })
