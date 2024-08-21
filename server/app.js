@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
+import { environments } from './config/environments.js';
 
 const app = express();
 
@@ -21,8 +22,7 @@ app.get('/', (req, res) => {
 })
 
 // initialize server
-
-const PORT = 4000;
+const PORT = environments.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 })
