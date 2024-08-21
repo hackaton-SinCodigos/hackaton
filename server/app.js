@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
 import { environments } from './config/environments.js';
 import { startDb } from './config/relations.js';
+import authRouter from './routes/auth.routes.js';
 
 const app = express();
 
@@ -18,9 +19,7 @@ app.use(morgan('dev'));
 
 // Routes
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use('/api/auth', authRouter)
 
 // initialize server
 const PORT = environments.PORT;
