@@ -4,14 +4,6 @@ import { DataTypes } from 'sequelize';
 export const UserModel = sequelize.define(
   'User',
   {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,7 +19,8 @@ export const UserModel = sequelize.define(
       allowNull: false
     },
     role: {
-      type: DataTypes.ENUM['client', 'admin', 'cinema'],
+      type: DataTypes.ENUM('client', 'admin', 'cinema'),
+      defaultValue: 'client',
       allowNull: false
     }
   },
