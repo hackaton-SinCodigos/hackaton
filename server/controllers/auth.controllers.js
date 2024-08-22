@@ -12,13 +12,9 @@ export const registerUser = async (req, res) => {
     
     const newUser = await createUser(user);
 
-    const token = createJWT({user: newUser.id})
-
-    const data = {
-      token
-    }
+    const token = await createJWT({id: newUser.id})
     
-    res.status(201).json(data);
+    res.status(201).json({token: token});
 
   } catch (err) {
     res.status(500).json({ error: err.message });
