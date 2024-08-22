@@ -5,17 +5,16 @@ export const registerUser = async (req, res) => {
   try {
     const user = req.body;
 
-    const existingUser = await getUserByEmail(user.email)
+    const existingUser = await getUserByEmail(user.email);
     if (existingUser) {
-      return res.status(409).send({ message: 'Este email ya esta registrado' });
+      return res.status(409).send({ message: 'Este email ya está registrado' });
     }
-    
+
     const newUser = await createUser(user);
 
-    const token = await createJWT({id: newUser.id})
-    
-    res.status(201).json({token: token});
+    const token = await createJWT({ id: newUser.id });
 
+    res.status(201).json({ token: token });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
