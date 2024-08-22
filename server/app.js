@@ -9,6 +9,7 @@ import { environments } from './config/environments.js';
 import { startDb } from './config/relations.js';
 import moviesRouter from './routes/movies.routes.js';
 import userRouter from './routes/user.routes.js';
+import hallRouter from './routes/all.routes.js';
 
 const app = express();
 
@@ -25,7 +26,8 @@ app.use(morgan('dev'));
 app.use('/api/auth', authRouter);
 app.use('/api/cinema', cinemaRouter);
 app.use('/api/movie', moviesRouter);
-app.use('/api/user', userRouter)
+app.use('/api/user', userRouter);
+app.use('/api/hall', hallRouter)
 
 // initialize server
 const PORT = environments.PORT;
