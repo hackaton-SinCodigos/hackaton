@@ -11,8 +11,8 @@ const emitionRouter = express.Router();
 
 emitionRouter.post('/', createEmitionController);
 emitionRouter.get('/', getAllEmitionsController);
-emitionRouter.get('//:id', getEmitionByIdController);
-emitionRouter.put('//:id', updateEmitionController);
-emitionRouter.delete('//:id', deleteEmitionController);
+emitionRouter.get('/:id', getEmitionByIdController);
+emitionRouter.put('/:id', updateEmitionController);
+emitionRouter.delete('/:id', deleteEmitionController);
 
 export default emitionRouter;
