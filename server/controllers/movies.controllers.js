@@ -1,5 +1,3 @@
-import { sequelize } from "../config/database.js";
-import { createCinemaService } from "../service/cinema.service.js";
 import { createMovieService, deleteMovieService, getMovieByIdService, getMoviesService, updateMovieService } from "../service/movies.service.js";
 
 //Crear pelicula
