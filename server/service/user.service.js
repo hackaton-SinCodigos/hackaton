@@ -1,5 +1,6 @@
 import { UserModel } from '../models/user.model.js';
 import { hashString } from '../helper/hashString.js';
+import { compare } from 'bcrypt';
 
 export const createUser = async (user) => {
   try {
@@ -23,20 +24,15 @@ export const getUserByEmail = async(email) => {
 }
 
 export const getUserByEmailAndPassword = async (email, password) => {
-  try {
     const user = await UserModel.findOne({ where: { email } });
     if (!user) {
-      throw new Error('User not found');
+      throw new Error('Datos erroneos');
     }
 
-    const isPasswordValid = await compareHash(password, user.password);
+    const isPasswordValid = await compare(password, user.password);
     if (!isPasswordValid) {
-      throw new Error('Invalid credentials');
+      throw new Error('Datos erroneos');
     }
 
     return user;
-  } catch (err) {
-    console.error(err);
-    throw new Error('Error getting user by email and password');
-  }
 }
