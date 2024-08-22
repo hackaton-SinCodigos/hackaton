@@ -30,14 +30,9 @@ export const loginUser = async (req, res) => {
       return res.status(401).send({ message: 'Credenciales incorrectas' });
     }
 
-    // Generar el token JWT
-    const token = createJWT({ user: user.id });
+    const token = await createJWT({ user: user.id });
 
-    const data = {
-      token,
-    };
-
-    res.json(data);
+    res.json({ token: token });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
