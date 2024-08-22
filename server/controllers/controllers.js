@@ -13,14 +13,12 @@ export async function newMovie(req, res) {
     trailer,
     distribution,
     duration,
-    director,
-    createdAt,
-    updatedAt,
+    director
   } = req.body;
 
   try {
     await connection.query(
-      "INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      'INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
       [
         title,
         clasification,
@@ -29,9 +27,7 @@ export async function newMovie(req, res) {
         trailer,
         distribution,
         duration,
-        director,
-        createdAt,
-        updatedAt,
+        director
       ]
     );
     res.status(201).json({ msg: "Movie created." });
@@ -94,7 +90,7 @@ export async function updateById(req, res) {
 
   try {
     await connection.query(
-      "UPDATE movies SET title = ?, clasification = ?, synopsis = ?, portrait = ?, trailer = ?, distribution = ?, duration = ?, duration = ?, director = ?, createdAt = ?, updatedAt = ?"[
+      "UPDATE movies SET title = ?, clasification = ?, synopsis = ?, portrait = ?, trailer = ?, distribution = ?, duration = ?, duration = ?, director = ?"[
         (title,
         clasification,
         synopsis,
@@ -102,9 +98,7 @@ export async function updateById(req, res) {
         trailer,
         distribution,
         duration,
-        director,
-        createdAt,
-        updatedAt)
+        director)
       ]
     );
     res.status(200).json({ msg: "Selected movie has been updated." });
