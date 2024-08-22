@@ -1,0 +1,53 @@
+
+
+  
+  .navbar-brand:hover {
+    color: #13a4c8; 
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .togglerIcon {
+    background-color: #e4bf03; 
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .navbar-nav {
+    font-size: 1rem;
+  }
+  
+  .navLink {
+    color: #ffffff; 
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #13a4c8; 
+    transform: scale(1.1); 
+  }
+  
+  .nav-item + .nav-item {
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar {
+      background-color: #203a43;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+      padding-top: 10px;
+    }
+  
+    .navLink {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  

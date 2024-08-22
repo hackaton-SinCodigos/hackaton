@@ -1,49 +1,78 @@
-
+import { Navbar } from "./Navbar.jsx";
+import styles from ".././assets/css/home.module.css"; 
 
 const Home = () => {
   return (
-    <div className="container mt-5">
-      <div className="jumbotron text-center">
-        <h1 className="display-4">bienvenido a Sincodigos</h1>
-        <p className="lead"> ehh  ezta son las peliculas disponibles en cartelra  </p>
-        <hr className="my-4" />
-        
+    <div className={styles.container}>
+      <Navbar />
+      <div className={styles.jumbotron}>
+        <h1 className={styles.title}>Bienvenido a Sincodigos</h1>
+        <p className={styles.lead}>
+          Descubre las películas más emocionantes disponibles en cartelera.
+        </p>
+        <hr className={styles.separator} />
       </div>
       
       <div className="row">
         <div className="col-md-4">
-          <div className="card mb-4">
-            <img src="https://via.placeholder.com/150" className="card-img-top" alt="Placeholder" />
-            <div className="card-body">
-              <h5 className="card-title">cine </h5>
-              <p className="card-text"> permite a el mostrar su cartelera funcione s, horarios   y precios</p>
-              <a href="#!" className="btn btn-primary">ve cartelera</a>
+          <div className={styles.card}>
+            <img
+              src="https://via.placeholder.com/150"
+              className={styles.cardImg}
+              alt="Cine"
+            />
+            <div >
+              <h5>Cine</h5>
+              <p >
+                Explora la cartelera, funciones, horarios y precios.
+              </p>
+              <a href="#!">
+                Ver Cartelera
+              </a>
             </div>
           </div>
         </div>
+
         <div className="col-md-4">
-          <div className="card mb-4">
-            <img src="https://via.placeholder.com/150" className="card-img-top" alt="Placeholder" />
-            <div className="card-body">
-              <h5 className="card-title">usuarios</h5>
-              <p className="card-text">permite a  los usuarios realizar reservas y ver cartelera </p>
-              <a href="#!" className="btn btn-primary"> ve reservas</a>
+          <div className={styles.card}>
+            <img
+              src="https://via.placeholder.com/150"
+              className={styles.cardImg}
+              alt="Usuarios"
+            />
+            <div className={styles.cardBody}>
+              <h5 className={styles.cardTitle}>Usuarios</h5>
+              <p className={styles.cardText}>
+                Realiza reservas y consulta la cartelera de cine.
+              </p>
+              <a href="#!" className={styles.cardBtn}>
+                Ver Reservas
+              </a>
             </div>
           </div>
         </div>
+
         <div className="col-md-4">
-          <div className="card mb-4">
-            <img src="https://via.placeholder.com/150" className="card-img-top" alt="Placeholder" />
-            <div className="card-body">
-              <h5 className="card-title">dashboard</h5>
-              <p className="card-text">le permite a alos cien ve las estadisticas como que dia se ve mas que horario se ve mas que idioma se ve mas o que edades se ve mas</p>
-              <a href="#!" className="btn btn-primary">ve el dashboard</a>
+          <div className={styles.card}>
+            <img
+              src="https://via.placeholder.com/150"
+              className={styles.cardImg}
+              alt="Dashboard"
+            />
+            <div className={styles.cardBody}>
+              <h5 className={styles.cardTitle}>Dashboard</h5>
+              <p>
+                Consulta estadísticas como días y horarios más populares.
+              </p>
+              <a href="#!">
+                Ver Dashboard
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Home;

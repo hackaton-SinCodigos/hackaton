@@ -1,20 +1,22 @@
 
-.container {
-    background-color: rgba(255, 255, 255, 0.85); 
+
+.register-container {
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     padding: 40px;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
+    backdrop-filter: blur(10px);
 }
 
-h2 {
-    color: #ffffff;
+.register-heading {
+    color: #000000;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.form-control {
+.register-form-control {
     border: 2px solid #e4bf03;
     border-radius: 12px;
     padding: 15px;
@@ -23,7 +25,7 @@ h2 {
     width: 100%;
 }
 
-.form-control:focus {
+.register-form-control:focus {
     border-color: #13a4c8;
     box-shadow: 0 0 10px rgba(19, 164, 200, 0.5);
     outline: 2px solid #13a4c8;
@@ -42,21 +44,4 @@ h2 {
     background-color: #e4bf03;
     border-color: #e4bf03;
     color: #333;
-}
-
-.form-check-input {
-    margin-top: 0.3rem;
-}
-
-.form-check-label {
-    font-weight: 500;
-}
-
-.mb-3 {
-    margin-bottom: 2rem;
-}
-
-form {
-    max-width: 100%;
-    margin: 0 auto;
 }
