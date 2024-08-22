@@ -1,7 +1,7 @@
 import { body } from 'express-validator';
 
 export const registerUserSchema = [
-  body('username')
+  body('userName')
     .exists()
     .trim()
     .escape()
