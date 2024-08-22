@@ -3,7 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
-import authRouter from './routes/auth.routes.js'
+import authRouter from './routes/auth.routes.js';
+import cinemaRouter from './routes/cinema.routes.js';
 import { environments } from './config/environments.js';
 import { startDb } from './config/relations.js';
 
@@ -19,7 +20,8 @@ app.use(morgan('dev'));
 
 // Routes
 
-app.use('/api/auth', authRouter)
+app.use('/api/auth', authRouter);
+app.use('/api/cinema', cinemaRouter)
 
 // initialize server
 const PORT = environments.PORT;
