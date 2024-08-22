@@ -34,7 +34,7 @@ GenresModel.belongsToMany(MoviesModel, {through: MoviesXGenresModel})
 
 export async function startDb() {
   try {
-    await sequelize.sync({alter: true});
+    await sequelize.sync({force: true});
     console.log('Database started successfully');
   } catch (err) {
     console.log('Error starting database')

@@ -18,8 +18,7 @@ export async function newMovie(req, res) {
 
   try {
     await connection.query(
-      'INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-      [
+      'INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director) VALUES (?, ?, ?, ?, ?, ?, ?, ?)' [
         title,
         clasification,
         synopsis,
