@@ -2,8 +2,7 @@ import styles from '../assets/css/home.module.css';
 
 const Home = () => {
   return (
-    <div>
-
+    <div className={styles.contenedor}>
       <div className={styles.hero}>
         <div className={styles.heroText}>
           <h1 className={styles.title}>Bienvenido a Sincodigos</h1>
