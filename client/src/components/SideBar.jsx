@@ -18,7 +18,7 @@ const Sidebar = () => {
       <button className={styles.sidebarButton} onClick={() => navigate('/login')}>
         Login
       </button>
-      <button className={styles.sidebarButton} onClick={() => navigate('/login')}>
+      <button className={styles.sidebarButton} onClick={() => navigate('/reserva')}>
         reservas
       </button>
     </div>

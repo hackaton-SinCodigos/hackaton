@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from "../../assets/css/register.module.css";
+import styles from '../../assets/css/register.module.css';
 
 const Register = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -9,22 +9,27 @@ const Register = () => {
   };
 
   return (
-    <div className={styles['register-body']}>
-      <div className={styles['register-container']}>
+    <div className={styles['register-container']}>
+      <div className={styles['container']}>
         <h2 className={styles['register-heading']}>Registrarse</h2>
         <form>
-          <div className="mb-3">
-            <label className="form-label">Nombre</label>
-            <input type="text" className={styles['register-form-control']}  placeholder='nombre'required />
+          <div className={styles.mb3}>
+            <label className={styles.formLabel}>Nombre</label>
+            <input type="text" className={styles['register-form-control']} placeholder='Nombre' required />
           </div>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Correo Electrónico</label>
-            <input type="email" className="form-control" id="email" placeholder='email' required />
+          <div className={styles.mb3}>
+            <label htmlFor="email" className={styles.formLabel}>Correo Electrónico</label>
+            <input type="email" className={styles['register-form-control']} id="email" placeholder='Correo Electrónico' required />
           </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label " placeholder="hola">Contraseña</label>
+          <div className={styles.mb3}>
+            <label htmlFor="password" className={styles.formLabel}>Contraseña</label>
             <input 
-              type={passwordShown ? "text" : "password"} className="form-control" id="password" placeholder='password' required />
+              type={passwordShown ? "text" : "password"} 
+              className={styles['register-form-control']} 
+              id="password" 
+              placeholder='Contraseña' 
+              required 
+            />
             <div className="form-check mt-2">
               <input 
                 className="form-check-input" 
@@ -37,17 +42,17 @@ const Register = () => {
               </label>
             </div>
           </div>
-          <div className="mb-3">
-            <label htmlFor="confirmPassword" className="form-label">Confirmar Contraseña</label>
+          <div className={styles.mb3}>
+            <label htmlFor="confirmPassword" className={styles.formLabel}>Confirmar Contraseña</label>
             <input 
               type={passwordShown ? "text" : "password"} 
-              className="form-control" 
+              className={styles['register-form-control']} 
               id="confirmPassword" 
-               placeholder='password'
+              placeholder='Confirmar Contraseña'
               required 
             />
           </div>
-          <button type="submit" className="btn btn-primary w-100">Registrarse</button>
+          <button type="submit" className={styles['btn-primary']}>Registrarse</button>
         </form>
       </div>
     </div>

@@ -1,5 +1,3 @@
-
-
 .register-container {
     display: flex;
     justify-content: center;
@@ -7,46 +5,64 @@
     background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    height: 100vh; 
-}
-
-.register-heading {
+    padding: 15px;
+  }
+  
+  .register-heading {
     color: #000000;
     margin-bottom: 30px;
     text-align: center;
-}
-
-.register-form-control {
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(10px); 
+  }
+  
+  .register-form-control {
     border: 2px solid #e4bf03;
     border-radius: 12px;
     padding: 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
     width: 100%;
-}
-
-.register-form-control:focus {
+    background: none;
+  }
+  
+  .register-form-control:focus {
     border-color: #13a4c8;
     box-shadow: 0 0 10px rgba(19, 164, 200, 0.5);
     outline: 2px solid #13a4c8;
-}
-
-.btn-primary {
+  }
+  
+  .btn-primary {
     background-color: #ba110e;
     border-color: #ba110e;
-    border-radius: 12px;
-    padding: 15px;
+ 
+
     transition: background-color 0.3s ease;
     width: 100%;
-}
-
-.btn-primary:hover {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .btn-primary:hover {
     background-color: #e4bf03;
     border-color: #e4bf03;
     color: #333;
-}
-
-@keyframes gradientBG {
+  }
+  
+  .mb3 {
+    margin-bottom: 2rem;
+  }
+  
+  @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }

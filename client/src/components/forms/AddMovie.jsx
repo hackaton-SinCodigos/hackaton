@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../assets/css/addMovie.module.css'; // Importa el archivo de estilos
+import styles from '../../assets/css/addMovie.module.css'; 
 
 const AddMovie = () => {
   const [movie, setMovie] = useState({
