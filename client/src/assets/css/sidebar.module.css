@@ -7,22 +7,6 @@
   padding: 5px;
   height: 100vh;
 }
-
-/* 
-.sidebarButton {
-  background-color: #ba110e;
-  border-color: #ba110e;
-  padding: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  align-items: center;
-  cursor: pointer;
-  height: 65px;
-  border: none;
-  width: 65px;
-  border-radius: 1000px;
-} */
- 
 .sidebarButton{
   background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
   background-size: 400% 400%;

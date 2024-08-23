@@ -24,6 +24,7 @@ const Routers = () => {
             <Route path="/login" element={authState.isLogged ? <Navigate to={"/"} /> : <Login />} />
             <Route path="/register" element={authState.isLogged ? <Navigate to={"/"} /> : <Register />} />
             <Route path="*" element={<NotFound />} />
+          
           </Routes>
         </div>
       </div>
