@@ -20,6 +20,8 @@ const Sidebar = () => {
       </button>
       <button className={styles.sidebarButton} onClick={() => navigate('/reserva')}>
       <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ticket.png" alt="ticket"/>
+      </button>     <button className={styles.sidebarButton} onClick={() => navigate('/movieInfo')}>
+      <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ticket.png" alt="ticket"/>
       </button>
     </div>
   );

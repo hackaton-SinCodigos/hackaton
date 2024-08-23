@@ -7,6 +7,7 @@ import AddMovie from '../components/forms/addMovie';
 import MovieList from '../components/MovieList';
 import { useState } from 'react';
 import ReservationsList from '../components/reservationlist';
+import { MovieInfo } from '../components/movieInfo';
 
 const Routers = () => {
   const [movies, setMovies] = useState([]);
@@ -24,6 +25,7 @@ const Routers = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/add-movie" element={<AddMovie addMovie={addMovie} />} />
             <Route path="/movie-list" element={<MovieList movies={movies} />} />
+            <Route path="/movieInfo" element={<MovieInfo/>} />
             <Route path="/reserva" element={<ReservationsList/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
