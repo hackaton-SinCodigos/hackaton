@@ -7,19 +7,19 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <button className={styles.sidebarButton} onClick={() => navigate('/')}>
-        Home
+      <img width="25" height="25" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/>
       </button>
       <button className={styles.sidebarButton} onClick={() => navigate('/movie-list')}>
-        Movie List
+      <img width="25" height="25" src="https://img.icons8.com/ios/50/list--v1.png" alt="list--v1"/>
       </button>
       <button className={styles.sidebarButton} onClick={() => navigate('/add-movie')}>
-        Add Movie
+      <img width="25" height="25" src="https://img.icons8.com/ios/50/add--v1.png" alt="add--v1"/>
       </button>
       <button className={styles.sidebarButton} onClick={() => navigate('/login')}>
-        Login
+      <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/login-rounded-right.png" alt="login-rounded-right"/>
       </button>
       <button className={styles.sidebarButton} onClick={() => navigate('/reserva')}>
-        reservas
+      <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ticket.png" alt="ticket"/>
       </button>
     </div>
   );
