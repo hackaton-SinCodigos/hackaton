@@ -9,6 +9,8 @@ const MovieCard = ({ movie }) => {
         <Card.Title>{movie.titulo}</Card.Title>
         <Card.Text>{movie.sinopsis}</Card.Text>
         <Button variant="primary" href={movie.trailer} target="_blank">Ver Tráiler</Button>
+        <Button variant="primarY" className={styles.reserva} target="_blank">Reserva</Button>
+
       </Card.Body>
     </Card>
   );
