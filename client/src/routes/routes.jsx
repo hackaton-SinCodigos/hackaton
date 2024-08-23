@@ -9,6 +9,7 @@ import { useState } from 'react';
 import ReservationsList from '../components/reservationlist';
 import { MovieInfo } from '../components/movieInfo';
 import AddHall from '../components/forms/addHall';
+import BarChart from '../components/chart';
 
 const Routers = () => {
   const [movies, setMovies] = useState([]);
@@ -32,6 +33,8 @@ const Routers = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/addHall" element={<AddHall/>} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/bar" element={<BarChart />} />
+            
           </Routes>
         </div>
       </div>
