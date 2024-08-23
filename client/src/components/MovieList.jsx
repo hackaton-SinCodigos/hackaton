@@ -1,4 +1,3 @@
-import MovieCard from './MovieCard';
 import Sidebar from './SideBar';
 import styles from '../assets/css/movieList.module.css'; 
 
