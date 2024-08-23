@@ -31,10 +31,13 @@ HallModel.belongsTo(CinemaModel)
 //Relacion entre peliculas y generos
 MoviesModel.belongsToMany(GenresModel, {through: MoviesXGenresModel})
 GenresModel.belongsToMany(MoviesModel, {through: MoviesXGenresModel})
+// Relación entre usuario y cine
+UserModel.belongsTo(CinemaModel, { foreignKey: 'cinemaId' });
+CinemaModel.hasMany(UserModel, { foreignKey: 'cinemaId' });
 
 export async function startDb() {
   try {
-    await sequelize.sync({force: true});
+    await sequelize.sync({force: false});
     console.log('Database started successfully');
   } catch (err) {
     console.log('Error starting database')
