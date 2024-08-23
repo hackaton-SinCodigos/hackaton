@@ -33,7 +33,7 @@ const ReservationsList = () => {
     <div className={styles.container}>
       <Sidebar />
       <div className={styles.content}>
-        <h1>Mis Reservas</h1>
+        <h1 className={styles.title}>Mis Reservas</h1>
         <div className={styles.tableContainer}>
           <table>
             <thead>

@@ -1,4 +1,28 @@
 
+.title {
+  text-align: center;
+  color: #fff;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease-in-out infinite;
+  padding: 10px 0px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease-in-out infinite;
+  padding: 10px 20px;
+}
 .movieList {
     display: flex;
   }
@@ -8,20 +32,12 @@
   
   }
   
-  .header {
-    margin-bottom: 20px;
-    background-color: #1d1e1f;
-    color: white;
-    border: none;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    background-color: #1d1e1f;
-    color: white;
-  }
-  
+
+.header{
+  background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease-in-out infinite;
+}
   .header p {
     font-size: 1rem;
     color: white;
@@ -30,7 +46,12 @@
   .cardsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre las tarjetas */
+    gap: 20px; 
     justify-content: center;
+  }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
