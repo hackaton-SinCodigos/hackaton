@@ -1,4 +1,10 @@
-/* Fondo animado para el título */
+.contenedor{
+
+    height: 100vh;
+}
+
+
+
 .title {
   text-align: center;
   color: #fff;
@@ -20,10 +26,7 @@
   text-align: center;
 }
 
-.separator {
-  border: 1px solid #fff;
-  margin: 40px 0;
-}
+
 
 .ctaButton {
   background-color: #ba110e;
@@ -61,44 +64,7 @@
   font-weight: 400;
 }
 
-.moviesList {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.movieCard {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.movieCard:hover {
-  transform: translateY(-10px);
-}
-
-.moviePoster {
-  border-radius: 5px;
-  width: 500px;
-  margin-bottom: 15px;
-}
-
-.movieTitle {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.movieDetails {
-  color: #999;
-  font-size: 0.9rem;
-}
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
