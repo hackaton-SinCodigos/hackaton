@@ -5,14 +5,15 @@
   background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  height: 100vh; 
-}
+  height: 100vh;
+} 
 
 .container {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); 
   backdrop-filter: blur(10px);
+  padding: 50px;
 }
 
 .title {
