@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-import Routers from './routes/routes'; 
+import CineMovie from '../routes/Cinema.Routes'; 
 function App() {
   
 
   return ( 
     <>
-    <Routers />
+    <CineMovie/>
     </>
   )
 }

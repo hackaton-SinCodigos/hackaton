@@ -1,0 +1,35 @@
+
+.home {
+    background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  .titulo {
+    text-align: center;
+  }
+  
+  .title {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .lead {
+    color: #f1f1f1;
+    margin-bottom: 20px;
+  }
+  
+  .separator {
+    border: 1px solid #fff;
+    margin: 20px 0;
+  }
+  
+  .movieContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
