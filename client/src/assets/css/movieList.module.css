@@ -2,10 +2,14 @@
 .movieList {
     display: flex;
   }
+
+  .sidebar {
+    flex: 0 0 200px; /* Ancho fijo para la barra lateral */
+  }
   
   .content {
     flex: 1;
-  
+    padding: 20px;
   }
   
   .header {

@@ -1,16 +1,18 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import styles from "../assets/css/movieCard.module.css"
-const MovieCard = ({ movie }) => {
+const MovieCard = () => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img className={styles.portada} src={movie.portada} />
-      <Card.Body>
-        <Card.Title>{movie.titulo}</Card.Title>
-        <Card.Text>{movie.sinopsis}</Card.Text>
-        <Button variant="primary" href={movie.trailer} target="_blank">Ver Tráiler</Button>
-      </Card.Body>
-    </Card>
+    <div className='card' style={{ width: '18rem' }}>
+      <img src='...' className='card-img-top' alt='...' />
+      <div className='card-body'>
+        <h5 className='card-title'>Card title</h5>
+        <p className='card-text'>
+          Some quick example text to build on the card title and make up the
+          bulk of the cards content.
+        </p>
+        <a href='#' className='btn btn-primary'>
+          Go somewhere
+        </a>
+      </div>
+    </div>
   );
 };
 

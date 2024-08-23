@@ -7,8 +7,6 @@ export const registerUserSchema = [
     .escape()
     .notEmpty()
     .withMessage('el nombre de usuario no debe estar vacio')
-    .isAlphanumeric()
-    .withMessage('el nombre de usuario debe ser alphanumerico')
     .isLength({min: 5, max: 20})
     .withMessage(
       'El nombre de usuario debe tener un minimo de 5 caracteres y un maximo de 20.'
