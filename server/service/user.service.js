@@ -59,7 +59,7 @@ export const finOneByToken = async (token) => {
     throw new Error('Token inválido');
   }
 
-  const userId = decodedToken.id;
+  const userId = decodedToken.user;
 
   const user = await UserModel.findByPk(userId);
 

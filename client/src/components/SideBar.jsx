@@ -48,8 +48,6 @@ const Sidebar = () => {
     });
   }
 
-  console.log(authState)
-
   return (
     <div className={styles.sidebar}>
       <button className={styles.sidebarButton} onClick={() => navigate('/')}>
@@ -86,7 +84,7 @@ const Sidebar = () => {
       ) : (
         ''
       )}
-      {user ? (
+      {authState.isLogged ? (
         <button 
           className={styles.sidebarButton}
           onClick={handleLogout}
