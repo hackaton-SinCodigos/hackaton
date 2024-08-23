@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-
+import styles from "../assets/css/movieCard.module.css"
 const MovieCard = ({ movie }) => {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={movie.portada} />
+      <Card.Img className={styles.portada} src={movie.portada} />
       <Card.Body>
         <Card.Title>{movie.titulo}</Card.Title>
         <Card.Text>{movie.sinopsis}</Card.Text>
