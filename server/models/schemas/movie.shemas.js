@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 
-export const createMovieValidation = [
+export const createMovieSchema = [
     body("title")
     .isString({
         min: 5,

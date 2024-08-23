@@ -1,8 +1,8 @@
 import { body } from "express-validator";
 
-export const cinemaValidation = [
+export const cinemaSchema = [
     body("name")
-   .notEmpty()
+    .notEmpty()
     .withMessage("El nombre del cine es obligatorio")
     .isString({
         min: 5,
