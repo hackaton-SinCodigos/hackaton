@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { CustomFetch } from '../../api/CustomFetch.jsx'
 import styles from '../../assets/css/addMovie.module.css'; 
+import Swal from 'sweetalert2';
 
 const AddMovie = () => {
   const [movie, setMovie] = useState({
@@ -17,10 +19,44 @@ const AddMovie = () => {
     setMovie({ ...movie, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Aquí agregarías la lógica para guardar la película en la base de datos
-    console.log(movie);
+
+    try {
+      const payload = {
+        title: movie.titulo,
+        clasification: movie.clasificacion,
+        synopsis: movie.sinopsis,
+        portrait: movie.portada,
+        trailer: movie.trailer,
+        distribution: movie.reparto,
+        duration: movie.duracion,
+        director: movie.director
+      }
+
+      await CustomFetch('http://localhost:4000/api/movie/', 'POST', payload)
+      Swal.fire({
+        title: "Pelicula agregada",
+        text: "La pelicula se agregó correctamente",
+        icon: "success",
+        width: "50%",
+        padding: "1rem",
+        background: "#FFF",
+        grow: "row",
+      })
+    } catch (err) {
+      console.error(err);
+      Swal.fire({
+        title: "Error",
+        text: "Hubo un problema al crear la pelicula",
+        icon: "error",
+        width: "50%",
+        padding: "1rem",
+        background: "#FFF",
+        grow: "row",
+    });
+    }
+
   };
 
   return (
