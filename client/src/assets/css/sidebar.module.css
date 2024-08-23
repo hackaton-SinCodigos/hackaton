@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   padding: 5px;
+  height: 100vh;
 }
 
 /* 
@@ -44,4 +45,8 @@
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+.logout{
+  margin-top: -3px;
+  margin-left: -3.5px;
 }

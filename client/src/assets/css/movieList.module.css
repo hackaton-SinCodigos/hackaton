@@ -28,14 +28,17 @@
   }
 
   .sidebar {
-    flex: 0 0 200px; /* Ancho fijo para la barra lateral */
-  }
+    width: 250px; 
+    background-color: #333; 
+
+}
   
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-  
+.content {
+  flex: 1; 
+
+  background-color: #f9f9f9; 
+}
+
 
 .header{
   background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);

@@ -12,7 +12,6 @@ const Routers = () => {
   return (
     <Router>
       <div>
-     
         <div >
           <Routes>
             <Route path="/" element={<HomePage />} />

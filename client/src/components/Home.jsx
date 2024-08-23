@@ -2,6 +2,9 @@
 import styles from '../assets/css/home.module.css';
 
 const Home = () => {
+
+
+  
   return (
     <div className={styles.home}>
       <div className={styles.titulo}>

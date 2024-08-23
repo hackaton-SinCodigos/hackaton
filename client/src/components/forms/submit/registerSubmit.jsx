@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { CustomFetch } from '../../../api/CustomFetch';
 import styles from '../../../assets/css/register.module.css';
 import useAuth from '../../../hook/useAuth.js'
@@ -21,7 +22,15 @@ export const RegisterSubmit = (stateForm) => {
     });
     login(data.token)
     
-    alert('Se registro correctamente')
+    Swal.fire({
+      title: "Éxito",
+      text: "Usuario registrado correctamente",
+      icon: "success",
+      width: "50%",
+      padding: "1rem",
+      background: "#FFF",
+      grow: "row",
+  });
     
     } catch (err) {
       console.error(err);
