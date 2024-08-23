@@ -9,12 +9,10 @@ export const createMovieValidation = [
     })
     .withMessage("El titulo solo debe contener letras.")
     .notEmpty()
-    .trim
     .withMessage("El titulo no puede estar vacio"),
     body("clasification")
     .notEmpty()
     .withMessage("La clasificacion no puede estar vacia.")
-    .trim
     .isIn(['G', 'PG', 'PG-13', 'R', 'NC-17'])
     .withMessage("Clasificacion invalida"),
     body("synopsis")
@@ -22,5 +20,11 @@ export const createMovieValidation = [
         min: 5,
         max: 155
     })
-    
+    .notEmpty()
+    .withMessage("La sinopsis no puede estar vacia."),
+    body("portrait")
+    .notEmpty(),
+    body("trailer")
+    .notEmpty(),
+    body()
 ]
