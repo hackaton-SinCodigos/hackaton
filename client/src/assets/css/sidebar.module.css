@@ -10,12 +10,12 @@
 }
 
 .sidebarButton {
-  background: none;
-  border: none;
+  background-color: #ba110e;
+  border-color: #ba110e;
   padding: 15px;
   margin-bottom: 10px;
   text-align: left;
-  color: #007bff;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
@@ -25,6 +25,7 @@
 }
 
 .sidebarButton:hover {
-  background: #007bff;
-  color: #fff;
+  background-color: #e4bf03;
+  border-color: #e4bf03;
+  color: #333;
 }
