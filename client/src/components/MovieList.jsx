@@ -48,9 +48,9 @@ const MovieList = () => {
                     </p>
                 </div>
                 <div className={styles.cardsContainer}>
-                    {movies.map((movie, index) => (
+                    {/* {movies.map((movie, index) => (
                         <MovieCard key={index} movie={movie} />
-                    ))}
+                    ))} */}
                 </div>
             </div>
         </div>
