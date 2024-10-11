@@ -13,20 +13,20 @@ export async function newMovie(req, res) {
     trailer,
     distribution,
     duration,
-    director
+    director,
   } = req.body;
 
   try {
     await connection.query(
-      'INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director) VALUES (?, ?, ?, ?, ?, ?, ?, ?)' [
-        title,
+      "INSERT INTO movies (title, clasification, synopsis, portrait, trailer, distribution, duration, director) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"[
+        (title,
         clasification,
         synopsis,
         portrait,
         trailer,
         distribution,
         duration,
-        director
+        director)
       ]
     );
     res.status(201).json({ msg: "Movie created." });
@@ -108,18 +108,19 @@ export async function updateById(req, res) {
 }
 
 //Borrar mediante id
-export async function deleteById(req,res){
-    const connection = await sequelize
+export async function deleteById(req, res) {
+  const connection = await sequelize;
 
-    const id =parseInt(req.params.id)
+  const id = parseInt(req.params.id);
 
-    try {
-        const output = await connection.query(
-            "DELETE FROM movies WHERE id = ?", id
-        );
-        res.status(200).json({msg:"Movie deleted."})
-    } catch (error) {
-        console.error(error)
-        res.status(400).json({msg:"Error deleting movie."})
-    }
+  try {
+    const output = await connection.query(
+      "DELETE FROM movies WHERE id = ?",
+      id
+    );
+    res.status(200).json({ msg: "Movie deleted." });
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ msg: "Error deleting movie." });
+  }
 }
