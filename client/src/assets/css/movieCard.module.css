@@ -1,0 +1,15 @@
+
+
+.portada{
+    height: 500px;
+    width: 100%;
+}
+.reserva{
+    background-color: red;
+    color: white;
+    margin: 5px;
+}
+.reserva:hover{
+    background-color: rgb(216, 209, 7);
+    color: rgb(0, 0, 0);
+}

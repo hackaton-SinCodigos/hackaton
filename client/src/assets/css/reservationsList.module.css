@@ -1,0 +1,59 @@
+
+.title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease-in-out infinite;
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}  
+  
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+
+  
+  .content {
+    flex: 1;
+
+    background: #f4f4f4;
+    overflow-y: auto;
+  }
+  
+  .tableContainer {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background: #1d1e1f;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

@@ -1,0 +1,73 @@
+.contenedor{
+
+    height: 100vh;
+}
+
+
+
+.title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #13a4c8, #ba110e, #e4bf03);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease-in-out infinite;
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lead {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+
+.ctaButton {
+  background-color: #ba110e;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #e4bf03;
+  transform: scale(1.05);
+}
+
+.section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
